@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>ENDLESS - Yukinobu's Homepage</title>
+</head>
+<script>
+    $.ajax({
+        url: '_nav.html',
+        dataType: 'html',
+    }).done(function (data) {
+        var doc = new DOMParser().parseFromString(data, "text/html");
+        document.getElementById("mobileNavigation").innerHTML = doc.getElementById("mobile-nav").outerHTML;
+        document.getElementById("navigvation").innerHTML = doc.getElementById("nav").outerHTML;
+
+        sideBar = document.getElementById("mobile-nav");
+        openSidebar = document.getElementById("openSideBar");
+        closeSidebar = document.getElementById("closeSideBar");
+        sideBar.style.transform = "translateX(-260px)";
+    }).fail(function (data) {
+    });
+</script>
+
+<body class="leading-normal tracking-normal text-white gradient">
+    <style>
+        html,
+        body {
+            height: 100vh;
+        }
+    </style>
+    <div class="w-full h-full">
+        <dh-component>
+            <div class="flex flex-no-wrap" style="height: 100vh;">
+                <!-- Sidebar starts -->
+                <!-- Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] -->
+                <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+
+                <div id="mobileNavigation"></div>
+                <div id="navigvation"></div>
+
+                <!-- Sidebar ends -->
+                <!-- Remove class [ h-64 ] when adding a card block -->
+                <section class="py-8 w-full sm:ml-64">
+                    <div class="container w-full mx-auto m-8">
+                        <form>
+                            <div class="grid gap-6 mb-6 lg:grid-cols-2">
+                                <div>
+                                    <label for="first_name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                        A車の車両価格</label>
+                                    <input type="text" id="first_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="100000000" required>
+                                </div>
+                                <div>
+                                    <label for="last_name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                        A車の燃費</label>
+                                    <input type="text" id="last_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="15.6" required>
+                                </div>
+                                <div>
+                                    <label for="company"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">B車の車両価格</label>
+                                    <input type="text" id="company"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="100000000" required>
+                                </div>
+                                <div>
+                                    <label for="phone"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                        B車の燃費</label>
+                                    <input type="tel" id="phone"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="15.6" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+            <script>
+                function sidebarHandler(flag) {
+                    if (flag) {
+                        sideBar.style.transform = "translateX(0px)";
+                        openSidebar.classList.add("hidden");
+                        closeSidebar.classList.remove("hidden");
+                    } else {
+                        sideBar.style.transform = "translateX(-260px)";
+                        closeSidebar.classList.add("hidden");
+                        openSidebar.classList.remove("hidden");
+                    }
+                }
+
+
+
+                // let hybrid_nenpi = 24.0;
+                // let hybrid_kakaku = 2163000;
+
+                // let gasoline_nenpi = 15.0;
+                // let gasoline_kakaku = 1857000;
+
+                // let gasoline_price = 150;
+                // let xkm;
+
+                // a + (x / b) * g == c + (x / d) * g
+                //     (x / b) * g - (x / d) * g == c - a
+                // gx(d - b) == bd(c - a)
+                // x = (bd(c - a)) / (g(d - b))
+
+
+
+
+                // xkhybrid_kakaku + (xkm / hybrid_nenpi) * gasoline_price == gasoline_kakaku + (xkm / gasoline_nenpi) * gasoline_price
+                // xkhybrid_kakaku - gasoline_kakaku == (xkm / gasoline_nenpi) * gasoline_price - (xkm / hybrid_nenpi) * gasoline_price
+                //     (xkhybrid_kakaku - gasoline_kakaku) / gasoline_price == (xkm / gasoline_nenpi) - (xkm / hybrid_nenpi)
+
+            </script>
+
+        </dh-component>
+    </div>
+</body>
+
+</html>
