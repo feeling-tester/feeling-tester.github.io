@@ -26,7 +26,7 @@
     });
 </script>
 
-<body class="leading-normal tracking-normal text-white gradient">
+<body class="leading-normal tracking-normal gradient">
     <style>
         html,
         body {
@@ -45,40 +45,56 @@
 
                 <!-- Sidebar ends -->
                 <!-- Remove class [ h-64 ] when adding a card block -->
-                <section class="py-8 w-full sm:ml-64">
-                    <div class="container w-full mx-auto m-8">
-                        <form>
+                <section class="py-8 sm:ml-64 w-full">
+                    <div class="container w-9/12 mx-auto">
+                        <form name="carData">
                             <div class="grid gap-6 mb-6 lg:grid-cols-2">
                                 <div>
-                                    <label for="first_name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    <label for="A_CarPrice" class="block mb-2 text-sm font-medium text-gray-900">
                                         A車の車両価格</label>
-                                    <input type="text" id="first_name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    <input type="text" id="A_CarPrice" name="A_CarPrice"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="100000000" required>
                                 </div>
                                 <div>
-                                    <label for="last_name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    <label for="A_CarFuelEconomy" class="block mb-2 text-sm font-medium text-gray-900 ">
                                         A車の燃費</label>
-                                    <input type="text" id="last_name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    <input type="text" id="A_CarFuelEconomy" name="A_CarFuelEconomy"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="15.6" required>
                                 </div>
                                 <div>
-                                    <label for="company"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">B車の車両価格</label>
-                                    <input type="text" id="company"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    <label for="B_CarPrice"
+                                        class="block mb-2 text-sm font-medium text-gray-900">B車の車両価格</label>
+                                    <input type="text" id="B_CarPrice" name="B_CarPrice"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="100000000" required>
                                 </div>
                                 <div>
-                                    <label for="phone"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    <label for="B_CarFuelEconomy" class="block mb-2 text-sm font-medium text-gray-900">
                                         B車の燃費</label>
-                                    <input type="tel" id="phone"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    <input type="text" id="B_CarFuelEconomy" name="B_CarFuelEconomy"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                         placeholder="15.6" required>
+                                </div>
+                                <div>
+                                    <label for="GasolinePrice" class="block mb-2 text-sm font-medium text-gray-900">
+                                        ガソリンの価格</label>
+                                    <input type="text" id="GasolinePrice" name="GasolinePrice"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="156" required>
+                                </div>
+                                <div></div>
+                                <div>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                                        onclick="calcBorderDistance()">
+                                        Button
+                                    </button>
+                                </div>
+                                <div></div>
+                                <div>
+                                    <p id="res"></p>
                                 </div>
                             </div>
                         </form>
@@ -101,13 +117,13 @@
 
 
 
-                // let hybrid_nenpi = 24.0;
-                // let hybrid_kakaku = 2163000;
+                let hybrid_nenpi = 24.0;
+                let hybrid_kakaku = 2163000;
 
-                // let gasoline_nenpi = 15.0;
-                // let gasoline_kakaku = 1857000;
+                let gasoline_nenpi = 15.0;
+                let gasoline_kakaku = 1857000;
 
-                // let gasoline_price = 150;
+                let gasoline_price = 150;
                 // let xkm;
 
                 // a + (x / b) * g == c + (x / d) * g
@@ -115,8 +131,39 @@
                 // gx(d - b) == bd(c - a)
                 // x = (bd(c - a)) / (g(d - b))
 
+                function calcBorderDistance() {
+                    let A_CarPrice = Number(document.forms['carData'].elements["A_CarPrice"].value);
+                    let B_CarPrice = Number(document.forms['carData'].elements["B_CarPrice"].value);
+                    let A_CarFuelEconomy = Number(document.forms['carData'].elements["A_CarFuelEconomy"].value);
+                    let B_CarFuelEconomy = Number(document.forms['carData'].elements["B_CarFuelEconomy"].value);
+                    let GasolinePrice = Number(document.forms['carData'].elements["GasolinePrice"].value);
+                    let BorderDistance = (A_CarFuelEconomy * B_CarFuelEconomy * (B_CarPrice - A_CarPrice)) / (GasolinePrice * (B_CarFuelEconomy - A_CarFuelEconomy));
+                    let Message = "";
+                    if (BorderDistance < 0) {
+                        if (A_CarPrice < B_CarPrice) {
+                            Message = "B車はA車と比較して元を取ることができません。";
+                        }
+                        else {
+                            Message = "A車はB車と比較して元を取ることができません。";
+
+                        }
+                    }
+                    else {
+                        if (A_CarPrice < B_CarPrice) {
+                            Message = "B車はA車と比較して" + BorderDistance.toString() + "km走ったタイミングで元を取ることができます。";
+                        }
+                        else {
+                            Message = "A車はB車と比較して" + BorderDistance.toString() + "km走ったタイミングで元を取ることができます。";
+                        }
+                    }
+                    document.getElementById("res").innerHTML = Message;
+                    debugger;
+                }
 
 
+                let borderDistance = (hybrid_nenpi * gasoline_nenpi * (gasoline_kakaku - hybrid_kakaku)) / (gasoline_price * (gasoline_nenpi - hybrid_nenpi));
+
+                console.log(borderDistance);
 
                 // xkhybrid_kakaku + (xkm / hybrid_nenpi) * gasoline_price == gasoline_kakaku + (xkm / gasoline_nenpi) * gasoline_price
                 // xkhybrid_kakaku - gasoline_kakaku == (xkm / gasoline_nenpi) * gasoline_price - (xkm / hybrid_nenpi) * gasoline_price
