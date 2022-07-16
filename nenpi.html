@@ -45,9 +45,14 @@
 
                 <!-- Sidebar ends -->
                 <!-- Remove class [ h-64 ] when adding a card block -->
-                <section class="py-8 sm:ml-64 w-full">
-                    <div class="container w-9/12 mx-auto">
-                        <form name="carData">
+                <section class="pt-2 pb-8 w-full sm:ml-64">
+                    <div class="container w-full mx-auto m-8">
+
+                        <h1 class="w-full mx-auto my-2 text-5xl font-bold leading-tight px-10 text-gray-800">
+                            燃費計算
+                        </h1>
+
+                        <form name="carData" class="px-10 mt-5">
                             <div class="grid gap-6 mb-6 lg:grid-cols-2">
                                 <div>
                                     <label for="A_CarPrice" class="block mb-2 text-sm font-medium text-gray-900">
@@ -89,7 +94,7 @@
                                     <button type="button"
                                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                                         onclick="calcBorderDistance()">
-                                        Button
+                                        燃費を計算
                                     </button>
                                 </div>
                                 <div></div>
@@ -157,7 +162,6 @@
                         }
                     }
                     document.getElementById("res").innerHTML = Message;
-                    debugger;
                 }
 
 

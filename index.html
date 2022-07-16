@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>ENDLESS - Yukinobu's Homepage</title>
+    <title>ENDLESS - yuckey8 Homepage</title>
 </head>
 <script>
     $.ajax({
@@ -26,16 +26,15 @@
     });
 </script>
 
-<body class="leading-normal tracking-normal text-white gradient">
+<body class="leading-normal tracking-normal gradient">
     <style>
-        html,
-        body {
-            height: 100vh;
+        * {
+            /* outline: 1px solid magenta; */
         }
     </style>
     <div class="w-full h-full">
         <dh-component>
-            <div class="flex flex-no-wrap" style="height: 100vh;">
+            <div class="flex flex-no-wrap">
                 <!-- Sidebar starts -->
                 <!-- Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] -->
                 <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
@@ -50,80 +49,106 @@
                 <section class="pt-2 pb-8 w-full sm:ml-64">
                     <div class="container w-full mx-auto m-8">
 
-                        <h1 class="w-9/12 mx-auto my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-                            Welcome to Yukinobu's Page</h1>
-                        <div class="w-full mb-4">
-                            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0"></div>
-                        </div>
+                        <h1 class="w-full mx-auto my-2 text-5xl font-bold leading-tight pl-10 text-gray-800">
+                            Welcome to yuckey8 Page
+                        </h1>
 
 
-                        <div class="flex flex-wrap sm:flex-row pb-20 md:ml-8">
-                            <div class="w-11/12 sm:w-1/2 p-6 mt-6 bg-gray-100 rounded-3xl mx-auto">
-                                <div class="align-middle">
-                                    <h2 class="text-3xl text-gray-800 font-bold leading-none mb-3">About Me</h2>
-                                    <p class="text-gray-600 mb-8 text-lg">
-                                        中学では卓球部に所属していたが、高校に入ってからは演劇部に入部し、舞台音響を担当する。この経験から「音」というものについて強く興味を持つ。大学では情報工学を学び、プログラミング開発にとどまらず、自然言語処理技術・音響信号解析技術・機械学習技術など、幅広い分野の知識について学んだ。それと同時にねこサークル、計算研究会、三重大学放送局などのサークルに所属し、幅広い仲間と関わりながら様々な経験を積み重ねていった。現在はこれまで培ってきた技術力を活かし、メーカーにて最新技術を取り入れながらシステム開発業務に取り組む。趣味は主に音楽鑑賞。ゲームも好きで、特にキングダムハーツシリーズがお気に入り。
+                        <div class="flex flex-wrap sm:flex-row pb-10 md:ml-4">
+                            <div class="w-full lg:w-1/2 p-6 mt-6">
+                                <img src="img/DSC_0385_2.jpg" width="80%" class="mx-auto" alt="">
+                            </div>
+                            <div class="w-11/12 lg:w-1/2 p-6 mt-6 mx-auto">
+                                <div class="align-middle bg-amber-100 rounded-3xl p-6">
+                                    <h2
+                                        class="text-3xl text-gray-800 font-bold leading-none pb-3 border-b border-b-gray-700 mb-2">
+                                        About Me</h2>
+                                    <ol class="list-none text-gray-700 text-lg">
+                                        <li><span class="font-semibold">出身</span>：愛知県</li>
+                                        <li><span class="font-semibold">職業</span>：メーカーの社内SE（システム開発メイン，インフラも勉強中）</li>
+                                        <li><span class="font-semibold">スキル</span>：
+                                            <ul class="ml-9 list-disc">
+                                                <li>C#（ASP.NET MVC，Windowsフォーム等）</li>
+                                                <li>Python</li>
+                                                <li>Windows, Linux</li>
+                                                <li>機械学習技術（SVM，ニューラルネットワークなどの活用）</li>
+                                                <li>自然言語処理技術（MeCabを用いた文章解析など）</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="font-semibold">趣味</span>：音楽鑑賞，ゲーム</li>
+
+                                    </ol>
                                 </div>
                             </div>
-                            <div class="w-full sm:w-1/2 p-6 mt-6">
-                                <img src="img/1587802_s.jpg" width="60%" class="mx-auto" alt="">
-                            </div>
+
                         </div>
 
 
-                        <div class="flex flex-wrap pb-20 md:ml-8 flex-col-reverse sm:flex-row">
-                            <div class="w-full sm:w-1/2 p-6">
-                                <img src="img/DSC_0385.JPG" width="90%" class="mx-auto" alt="">
+                        <div class="flex flex-wrap sm:flex-row pb-10 md:ml-4 p-6">
+                            <div class="w-11/12 md:w-full mx-auto align-middle bg-gray-100 rounded-3xl p-6">
+                                <h2
+                                    class="text-3xl text-gray-800 font-bold leading-none pb-3 border-b border-b-gray-700 mb-2">
+                                    Description</h2>
+                                <p class="text-gray-700 mb-2 text-lg">
+                                    中学では卓球部に所属していた．高校に入ってからは演劇部に入部し，主に舞台音響を担当．大学では情報工学分野について学び，プログラミング開発にとどまらず，自然言語処理技術・音響信号解析技術・機械学習技術など，幅広い分野の知識について学んだ．それと同時にねこサークル，計算研究会，三重大学放送局などのサークルに所属し，幅広い仲間と関わりながら様々な経験を積み重ねていった。現在はメーカーにて，最新技術を取り入れた先進的なシステム開発業務に取り組む。
                             </div>
-                            <div class="w-11/12 sm:w-1/2 p-6 bg-gray-100 rounded-3xl mx-auto">
-                                <h2 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+
+                        </div>
+
+
+                        <div class="flex flex-wrap sm:flex-row pb-10 md:ml-4 p-6">
+                            <div class="w-11/12 md:w-full mx-auto align-middle bg-gray-100 rounded-3xl p-6">
+                                <h2
+                                    class="text-3xl text-gray-800 font-bold leading-none pb-3 border-b border-b-gray-700 mb-3">
                                     History
                                 </h2>
-                                <p class="text-gray-600 mb-2">
+                                <p class="text-gray-700 mb-2 text-lg">
                                     <span class="font-semibold">2015年4月</span>：三重大学工学部情報工学科に入学。
                                 </p>
-                                <p class="text-gray-600 mb-2">
+                                <p class="text-gray-700 mb-2 text-lg">
                                     <span
-                                        class="font-semibold">2019年3月</span>：三重大学工学部情報工学科を卒業。学部時代には「音声の音響的特徴を用いた感情推定」に関する研究に取り組む。
+                                        class="font-semibold">2019年3月</span>：三重大学工学部情報工学科を卒業。「音声の音響的特徴を用いた感情推定」に関する研究に取り組み、卒業論文ではその成果について執筆した。
                                 </p>
-                                <p class="text-gray-600 mb-2">
+                                <p class="text-gray-700 mb-2 text-lg">
                                     <span class="font-semibold">2019年4月</span>：三重大学大学院工学研究科情報工学専攻に入学。
                                 </p>
-                                <p class="text-gray-600 mb-2">
+                                <p class="text-gray-700 mb-2 text-lg">
                                     <span
-                                        class="font-semibold">2021年3月</span>：三重大学大学院工学研究科情報工学専攻を卒業。大学院では「顎骨骨髄炎発症範囲推定のための術前頭部CT画像・切除顎骨CT画像・病理画像の位置合わせ自動化手法の提案」というテーマで研究を実施。
+                                        class="font-semibold">2021年3月</span>：三重大学大学院工学研究科情報工学専攻を卒業。大学院では「顎骨骨髄炎発症範囲推定のための術前頭部CT画像・切除顎骨CT画像・病理画像の位置合わせ自動化手法の提案」というテーマで研究を実施し、修士論文ではその成果について執筆した。
                                 </p>
-                                <p class="text-gray-600 mb-2">
+                                <p class="text-gray-700 mb-2 text-lg">
                                     <span class="font-semibold">2021年4月</span>：メーカーにITエンジニアとして就職。
                                 </p>
-
                             </div>
                         </div>
 
-                        <div class="flex flex-wrap pb-20 md:ml-8">
-                            <div class="w-11/12 sm:w-1/2 p-6 bg-gray-100 rounded-3xl mx-auto">
+                        <div class="flex flex-wrap sm:flex-row pb-10 md:ml-4 p-6">
+                            <div class="w-11/12 md:w-full mx-auto align-middle bg-gray-100 rounded-3xl p-6">
+
                                 <h2 class="text-3xl text-gray-800 font-bold leading-none mb-3">
                                     Research Publication
                                 </h2>
-                                <ul class="text-gray-600 list-decimal">
-                                    <li class="ml-5 mb-2"><b>松岡 志宜, 盛田 健人, 武田 大介, 長谷川, 巧実, 若林 哲史</b>, "顎骨骨髄炎発症範囲推定のための頭部
-                                        CT・切除顎骨 CT
-                                        の位置合わせ自動化," <i>第39回⽇本医⽤画像⼯学会⼤会</i>, 2020</li>
-                                    <li class="ml-5 mb-2"><b>松岡 志宜, 盛田 健人, 武田 大介, 長谷川 巧実, 若林 哲史</b>,
-                                        "正規化相互相関とDice係数を用いた術前頭部CT画像および病理画像の対応付け手法," <i>医用画像研究会</i>, 2021</li>
-                                    <li class="ml-5 mb-2"><b>Yukinobu Matsuoka, Kento Morita, Daisuke Takeda, Takumi
-                                            Hasegawa, Tetsushi
-                                            Wakabayashi</b>, "Automated registration of pre-operative head CT image and
-                                        pathology images for osteoradionecrosis area estimation," <i>World Automation
-                                            Congress</i>, 2021</li>
+                                <ul class="text-gray-700 list-decimal text-lg">
+                                    <li class="ml-5 mb-2">
+                                        <b>松岡 志宜, 盛田 健人, 武田 大介, 長谷川, 巧実, 若林 哲史</b>,
+                                        "顎骨骨髄炎発症範囲推定のための頭部CT・切除顎骨 CTの位置合わせ自動化,"
+                                        <i>第39回⽇本医⽤画像⼯学会⼤会</i>, 2020
+                                    </li>
+                                    <li class="ml-5 mb-2">
+                                        <b>松岡 志宜, 盛田 健人, 武田 大介, 長谷川 巧実, 若林 哲史</b>,
+                                        "正規化相互相関とDice係数を用いた術前頭部CT画像および病理画像の対応付け手法,"
+                                        <i>医用画像研究会</i>, 2021
+                                    </li>
+                                    <li class="ml-5 mb-2">
+                                        <b>Yukinobu Matsuoka, Kento Morita, Daisuke Takeda, Takumi Hasegawa,
+                                            Tetsushi Wakabayashi</b>,
+                                        "Automated registration of pre-operative head CT image and pathology images
+                                        for osteoradionecrosis area estimation,"
+                                        <i>World Automation Congress</i>, 2021
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="w-full sm:w-1/2 p-6">
-                                <img src="img/e7QzKFHl.jpg_large" width="80%" class="mx-auto" alt="">
-                            </div>
                         </div>
-
-
                     </div>
 
                 </section>
